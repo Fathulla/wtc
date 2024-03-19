@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./js/splide/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="./js/hystModal/dist/hystmodal.min.css" />
     <title>wtc</title>
   </head>
   <body>
@@ -66,7 +67,9 @@
             /
             <a href="#">Uz</a>
           </div>
-          <a href="#" class="primary_button"> Оставить заявку </a>
+          <a href="#application" class="primary_button">
+            Оставить заявку
+          </a>
         </div>
       </div>
     </nav>
@@ -91,7 +94,7 @@
         </div>
       </div>
     </section>
-    <section class="why_wtc">
+    <section class="why_wtc" id="why_wtc">
       <div class="container">
         <div class="left">
           <h2>Почему именно WTC ?</h2>
@@ -114,7 +117,7 @@
         </div>
       </div>
     </section>
-    <section class="about_product">
+    <section class="about_product" id="about_product">
       <div class="container">
         <div class="wrapper">
           <div class="card">
@@ -159,7 +162,7 @@
         </div>
       </div>
     </section>
-    <section class="slider">
+    <section class="slider" id="popular_products">
       <div class="container"><h2>Популярные товары</h2></div>
       <div class="slider_wrapper">
         <div class="splide" role="group" aria-label="Splide Basic HTML Example">
@@ -190,12 +193,38 @@
                   <img src="#" alt="" />
                 </div>
               </li>
+
+              <li class="splide__slide">
+                <div class="slider_wrapper__card">
+                  <img src="#" alt="" />
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="slider_wrapper__card">
+                  <img src="#" alt="" />
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="slider_wrapper__card">
+                  <img src="#" alt="" />
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="slider_wrapper__card">
+                  <img src="#" alt="" />
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="slider_wrapper__card">
+                  <img src="#" alt="" />
+                </div>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-    <section class="news">
+    <section class="news" id="news">
       <div class="container">
         <h2>Новинки</h2>
       </div>
@@ -220,7 +249,7 @@
       <div class="container"><h2>Товары со скидкой</h2></div>
       <div class="slider_wrapper">
         <div
-          class="splide2"
+          class="splide splide1"
           role="group"
           aria-label="Splide Basic HTML Example"
         >
@@ -251,12 +280,37 @@
                   <img src="#" alt="" />
                 </div>
               </li>
+              <li class="splide__slide">
+                <div class="slider_wrapper__card">
+                  <img src="#" alt="" />
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="slider_wrapper__card">
+                  <img src="#" alt="" />
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="slider_wrapper__card">
+                  <img src="#" alt="" />
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="slider_wrapper__card">
+                  <img src="#" alt="" />
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="slider_wrapper__card">
+                  <img src="#" alt="" />
+                </div>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-    <section class="application">
+    <section class="application" id="application">
       <div class="container">
         <h2>Оставьте заявку и мы с вами свяжемся!</h2>
       </div>
@@ -305,7 +359,7 @@
         </div>
       </div>
     </section>
-    <section class="news">
+    <section class="news" id="news1">
       <div class="news_wrapper">
         <div class="container">
           <div class="left">
@@ -326,7 +380,7 @@
     <footer class="container">
       <div class="top">
         <div class="footer_logo">
-          <img src="./img/Logo.png" alt="logo"/>
+          <img src="./img/Logo.png" alt="logo" />
         </div>
         <ul>
           <li><span>Меню</span></li>
@@ -336,15 +390,15 @@
           <li><a href="./pages/contacts.html">Контакты</a></li>
         </ul>
         <ul>
-          <li><a href="#">Почему мы?</a></li>
-          <li><a href="#">О продукции</a></li>
-          <li><a href="#">Популярные товары</a></li>
-          <li><a href="#">Новинки</a></li>
+          <li><a href="#why_wtc">Почему мы?</a></li>
+          <li><a href="#about_product">О продукции</a></li>
+          <li><a href="#popular_products">Популярные товары</a></li>
+          <li><a href="#news">Новинки</a></li>
           <li><a href="#">Отзывы</a></li>
-          <li><a href="#">Новости</a></li>
+          <li><a href="#news1">Новости</a></li>
         </ul>
         <div class="info_wrapper">
-          <a href="#" class="primary_button">Оставить заявку</a>
+          <a href="#application" class="primary_button">Оставить заявку</a>
           <div class="info_bottom">
             <div class="contacts">
               <a href="tel:998909190133">+998 (90) 919 01 33</a>
@@ -362,6 +416,7 @@
         <a href="#">Согласие на обработку персональных данных</a>
       </div>
     </footer>
+    <script src="./js/hystModal/dist/hystmodal.min.js"></script>
     <script src="./js/splide/dist/js/splide.min.js"></script>
     <script src="./js/main.js"></script>
   </body>

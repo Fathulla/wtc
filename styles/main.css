@@ -12,12 +12,6 @@ body {
   background-color: var(--white);
   padding: 33px 0 0 0;
 }
-h1 {
-  font-family: "Jazmin";
-  font-size: 54px;
-  font-weight: 700;
-  color: var(--primary-text-color);
-}
 h2 {
   font-family: "Jazmin", sans-serif;
   font-size: 44px;
@@ -513,65 +507,65 @@ section.catalog_list .catalog_result .cards_wrapper .card {
 
 /*?????????????????????????  PRODUCT PAGE  ????????????????????????*/
 
-section.about_product {
+section.about_product1 {
   display: flex;
   gap: 60px;
 }
 
-section.about_product .product_photos .main_photo {
+section.about_product1 .product_photos .main_photo {
   width: 666px;
   height: 560px;
   background-color: var(--light-gray);
 }
-section.about_product .product_photos .photos_wrapper {
+section.about_product1 .product_photos .photos_wrapper {
   margin-top: var(--primary-space-between-elements);
   display: flex;
   gap: var(--primary-space-between-elements);
 }
-section.about_product .product_photos .photos_wrapper .photo {
+section.about_product1 .product_photos .photos_wrapper .photo {
   width: 202px;
   height: 158px;
   background-color: var(--light-gray);
 }
 
-section.about_product .product_info {
+section.about_product1 .product_info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-section.about_product .product_info ul {
+section.about_product1 .product_info ul {
   font-family: Montserrat;
   font-size: 17px;
   font-weight: 600;
   color: var(--primary-text-color);
 }
 
-section.about_product .product_info .description {
+section.about_product1 .product_info .description {
   display: flex;
   flex-direction: column;
   gap: var(--secondary-space-between-elements);
 }
-section.about_product .product_info .description h3 {
+section.about_product1 .product_info .description h3 {
   font-family: Jazmin;
   font-size: 24px;
   font-weight: 600;
   color: var(--primary-text-color);
 }
-section.about_product .product_info .description p {
+section.about_product1 .product_info .description p {
   font-family: Montserrat;
   font-size: 17px;
   font-weight: 500;
   color: var(--secondary-text-color);
   line-height: 24px;
 }
-section.about_product .product_info .description a {
+section.about_product1 .product_info .description a {
   font-family: Verdana;
   font-size: 17px;
   font-weight: 400;
   color: var(--gray);
   text-decoration: underline;
 }
-section.about_product .product_info .buttons_wrapper {
+section.about_product1 .product_info .buttons_wrapper {
   display: flex;
   gap: var(--primary-space-between-elements);
 }
@@ -665,14 +659,14 @@ section.news_main .cards_wrapper .card {
 }
 
 /*?????????????????????????  NEWS PAGE  ????????????????????????*/
-section.news .cards_wrapper {
+section.newsPage .cards_wrapper {
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
-  gap: var(--primary-space-between-elements);
+  /* gap: var(--primary-space-between-elements); */
   flex-wrap: wrap;
 }
-section.news .cards_wrapper .text_block {
+section.newsPage .cards_wrapper .text_block {
   font-family: Montserrat;
   font-size: 23px;
   font-weight: 600;
@@ -680,8 +674,98 @@ section.news .cards_wrapper .text_block {
   text-align: left;
   width: 35vw;
 }
-section.news .cards_wrapper .card {
+section.newsPage .cards_wrapper .card {
   width: 35vw;
   height: 383px;
   background-color: var(--light-gray);
+}
+
+/*?????????????????????????  CONTACTS PAGE  ????????????????????????*/
+section.contacts_block .wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+section.contacts_block .wrapper .left {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+}
+section.contacts_block .wrapper .left .left_block {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+section.contacts_block .wrapper .left .left_block .left_circle {
+  width: 40px;
+  height: 40px;
+  background-color: var(--light-gray);
+  border-radius: 50%;
+}
+section.contacts_block .wrapper .left .left_block .left_text {
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--primary-text-color);
+  display: block;
+}
+section.contacts_block .wrapper .right {
+  width: 782px;
+  height: 478px;
+  background-color: var(--light-gray);
+}
+
+/*?????????????????????????  MODAL  ????????????????????????*/
+.modal {
+  padding: 70px 86px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--secondary-space-between-elements);
+  width: 100%;
+}
+.modal form input {
+  padding: 14px 30px;
+  background-color: var(--light-gray);
+  color: var(--white);
+  border: none;
+  outline: none;
+  width: 100%;
+}
+.modal form textarea {
+  padding: 14px 30px;
+  background-color: var(--light-gray);
+  color: var(--white);
+  border: none;
+  outline: none;
+}
+.modal button {
+  width: 100%;
+  padding: 14px 0;
+  font-family: Montserrat;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--white);
+  margin-top: 50px;
+}
+
+.modal .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.modal .wrapper label {
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray);
 }

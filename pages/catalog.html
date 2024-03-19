@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../js/splide/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="../js/hystModal/dist/hystmodal.min.css" />
     <title>Catalog</title>
   </head>
   <body>
@@ -66,7 +67,7 @@
             /
             <a href="#">Uz</a>
           </div>
-          <a href="#" class="primary_button"> Оставить заявку </a>
+          <a href="#" data-hystmodal="#myModal" class="primary_button"> Оставить заявку </a>
         </div>
       </div>
     </nav>
@@ -87,26 +88,26 @@
         <div class="filter_block">
           <a href="#">Категория</a>
           <label for="">
-            <input type="checkbox"/>
+            <input type="checkbox" />
             Маторное масло
           </label>
           <label for="">
-            <input type="checkbox"/>
+            <input type="checkbox" />
             Трансмиссионное масло
           </label>
         </div>
         <div class="filter_block">
           <a href="#">Линейка</a>
           <label for="">
-            <input type="checkbox"/>
+            <input type="checkbox" />
             G11
           </label>
           <label for="">
-            <input type="checkbox"/>
+            <input type="checkbox" />
             G12
           </label>
           <label for="">
-            <input type="checkbox"/>
+            <input type="checkbox" />
             QUALARD
           </label>
         </div>
@@ -229,7 +230,36 @@
         <a href="#">Согласие на обработку персональных данных</a>
       </div>
     </footer>
+    <div class="hystmodal" id="myModal" aria-hidden="true">
+      <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+          <button data-hystclose class="hystmodal__close">Закрыть</button>
+          <div class="modal">
+            <h2>Оставьте заявку</h2>
+            <form action="">
+              <input type="text" placeholder="ФИО*">
+              <input type="text" placeholder="+998 (--) --- -- -- *">
+              <input type="text" placeholder="E-mail*">
+              <textarea name="" id="" cols="30" rows="10" placeholder="Комментарий"></textarea>
+            <button class="primary_button" type="submit">Отправить</button>
+            </form>
+            <div class="wrapper">
+              <label for="">
+                <input type="radio">
+                Я даю согласие на обработку персональных данных  и ознакомлен (-а) с Политикой в отношении обработки персональных данных.
+              </label>
+              <label for="">
+                <input type="radio">
+                Я даю согласие на получение рекламной рассылки.
+              </label>
+            </div>
+          </div>
+          <!-- Ваш HTML код модального окна -->
+        </div>
+      </div>
+    </div>
+    <script src="../js/hystModal/dist/hystmodal.min.js"></script>
     <script src="../js/splide/dist/js/splide.min.js"></script>
-  <script src="../js/main.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
