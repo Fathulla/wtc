@@ -3,6 +3,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     type: "slide",
     perPage: 5,
     drag: "free",
+    gap: 30
   } );
   splide.mount();
 
@@ -13,6 +14,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     type: "slide",
     perPage: 5,
     drag: "free",
+    gap: 30,
   } );
   splide.mount();
   

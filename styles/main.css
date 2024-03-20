@@ -39,7 +39,7 @@ textarea {
 }
 
 .container {
-  padding: 0 279px;
+  padding: 0 39px;
 }
 .primary_button {
   padding: 10px 35px;
@@ -242,38 +242,32 @@ section.why_wtc .container .right .card {
 
 /*?????????????????????????  SECTION ABOUT PRODUCT  ????????????????????????*/
 section.about_product {
-  display: flex;
-  flex-direction: column;
-}
-section.about_product .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: var(--primary-space-between-elements);
 }
 section.about_product .card {
-  width: 434px;
+  width: 100%;
   height: 228px;
   background-color: var(--light-gray);
 }
-section.about_product .container .wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: var(--primary-space-between-elements);
-}
-section.about_product .container .wrapper .another_card {
+
+section.about_product .card_text {
+  width: 100%;
+  height: 228px;
   text-align: right;
 }
-section.about_product .container .wrapper .another_card h2 {
-  margin-bottom: 30px;
+section.about_product .card_text h2{
+  margin-bottom: var(--primary-space-between-elements);
 }
-section.about_product .container .cards_wrapper {
+section.under_about_product {
   margin-top: 90px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: var(--primary-space-between-elements);
 }
-section.about_product .container .cards_wrapper .border_card {
-  width: 318px;
+section.under_about_product .border_card {
+  width: 100%;
   height: 168px;
   border: 6px solid var(--light-gray);
 }
@@ -323,19 +317,17 @@ section.application form.application_form {
   background-color: var(--light-gray);
   padding-top: 60px;
   padding-bottom: 60px;
-  display: flex;
-  /* justify-content: space-between; */
-  /* width: 100%; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: var(--primary-space-between-elements);
   margin-top: 40px;
 }
-
 section.application form.application_form .left .inputs_wrapper {
   display: flex;
   flex-direction: column;
   gap: var(--secondary-space-between-elements);
   margin-bottom: 56px;
-  width: 666px;
+  width: 100%;
 }
 section.application form.application_form .left .inputs_wrapper input {
   background-color: var(--white);
@@ -343,22 +335,32 @@ section.application form.application_form .left .inputs_wrapper input {
   border: none;
   outline: none;
 }
+section.application form.application_form .right {
+  width: 100%;
+}
 
+section.application form.application_form .right textarea {
+  width: 100%;
+  height: 206px;
+}
 section.application form.application_form .right .inputs_wrapper {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 25px;
+  width: 100%;
 }
+
 
 /*?????????????????????????  SECTION ABOUT  ????????????????????????*/
 section.about .cards_wrapper {
   margin-top: 60px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--primary-space-between-elements);
 }
 section.about .cards_wrapper .card {
-  width: 434px;
+  width: 100%;
   height: 525px;
   background-color: var(--light-gray);
 }
@@ -452,12 +454,22 @@ footer.container .bottom a {
 
 section.catalog_list {
   margin-top: 26px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "nothing sort"
+                      "filter list"
+  ;
   gap: var(--primary-space-between-elements);
-  /* gap: 200px; */
+}
+
+section.catalog_list .sort_block {
+  grid-area: sort;
 }
 
 section.catalog_list .catalog_filters {
+  grid-area: filter;
+
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -491,16 +503,13 @@ section.catalog_list .catalog_filters .buttons_wrapper {
 }
 
 section.catalog_list .catalog_result {
-  align-self: flex-start;
-}
-section.catalog_list .catalog_result .cards_wrapper {
-  display: flex;
+  grid-area: list;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: var(--primary-space-between-elements);
-  gap: 10px;
-  flex-wrap: wrap;
 }
-section.catalog_list .catalog_result .cards_wrapper .card {
-  width: 318px;
+section.catalog_list .catalog_result .card {
+  width: 100%;
   height: 476px;
   background-color: var(--light-gray);
 }
@@ -508,22 +517,25 @@ section.catalog_list .catalog_result .cards_wrapper .card {
 /*?????????????????????????  PRODUCT PAGE  ????????????????????????*/
 
 section.about_product1 {
-  display: flex;
-  gap: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px
 }
 
 section.about_product1 .product_photos .main_photo {
-  width: 666px;
+  width: 100%;
   height: 560px;
   background-color: var(--light-gray);
 }
 section.about_product1 .product_photos .photos_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
   margin-top: var(--primary-space-between-elements);
-  display: flex;
   gap: var(--primary-space-between-elements);
 }
 section.about_product1 .product_photos .photos_wrapper .photo {
-  width: 202px;
+  width: 100%;
   height: 158px;
   background-color: var(--light-gray);
 }
@@ -572,8 +584,11 @@ section.about_product1 .product_info .buttons_wrapper {
 
 /*?????????????????????????  ABOUT COMPANY PAGE  ????????????????????????*/
 section.company_info {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 94px; */
+  height: 441px;
+  /* justify-content: space-between; */
 }
 section.company_info .left {
   display: flex;
@@ -588,12 +603,9 @@ section.company_info .left p {
   color: var(--secondary-text-color);
 }
 section.company_info .right {
-  width: 666px;
-  height: 441px;
+  width: 100%;
+  height: 100%;
   background-color: var(--light-gray);
-}
-
-section.milestone {
 }
 
 section.milestone .cards_wrapper {
@@ -602,7 +614,7 @@ section.milestone .cards_wrapper {
   justify-content: center;
 }
 section.milestone .cards_wrapper .mile_connector {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 section.milestone .cards_wrapper .card .card_img {
   width: 232px;
@@ -632,28 +644,29 @@ section.our_values .cards_wrapper {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--light-gray);
+  height: 494px;
 }
-section.our_values .cards_wrapper .container {
-  display: flex;
-  justify-content: space-between;
+section.our_values .cards_wrapper  {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--primary-space-between-elements);
 }
 
-section.our_values .cards_wrapper .container .card {
-  width: 434px;
-  height: 374px;
+section.our_values .cards_wrapper .card {
+  width: 100%;
+  height: 100%;
   background-color: var(--white);
 }
 
 /*?????????????????????????  NEWS MAIN PAGE  ????????????????????????*/
 section.news_main .cards_wrapper {
   margin-top: 40px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: var(--primary-space-between-elements);
-  justify-content: space-between;
 }
 section.news_main .cards_wrapper .card {
-  width: 34vw;
+  width: 100%;
   height: 437px;
   background-color: var(--light-gray);
 }
@@ -661,10 +674,9 @@ section.news_main .cards_wrapper .card {
 /*?????????????????????????  NEWS PAGE  ????????????????????????*/
 section.newsPage .cards_wrapper {
   margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
-  /* gap: var(--primary-space-between-elements); */
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--primary-space-between-elements);
 }
 section.newsPage .cards_wrapper .text_block {
   font-family: Montserrat;
@@ -672,18 +684,17 @@ section.newsPage .cards_wrapper .text_block {
   font-weight: 600;
   line-height: 24px;
   text-align: left;
-  width: 35vw;
 }
 section.newsPage .cards_wrapper .card {
-  width: 35vw;
   height: 383px;
   background-color: var(--light-gray);
 }
 
 /*?????????????????????????  CONTACTS PAGE  ????????????????????????*/
 section.contacts_block .wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 478px;
   margin-top: 50px;
 }
 section.contacts_block .wrapper .left {
@@ -711,8 +722,8 @@ section.contacts_block .wrapper .left .left_block .left_text {
   display: block;
 }
 section.contacts_block .wrapper .right {
-  width: 782px;
-  height: 478px;
+  width: 100%;
+  height: 100%;
   background-color: var(--light-gray);
 }
 
